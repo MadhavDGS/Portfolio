@@ -176,3 +176,52 @@ html {
 .glitch {
   animation: glitch 0.5s infinite;
 }
+
+/* Cyber Grid */
+.cyber-grid {
+  position: absolute;
+  inset: 0;
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(100, 255, 218, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(100, 255, 218, 0.05) 1px, transparent 1px);
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: top;
+  animation: grid-animation 20s linear infinite;
+}
+
+@keyframes grid-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Scanline Effect */
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 0.5%,
+    transparent 1%
+  );
+  pointer-events: none;
+  z-index: 15;
+  animation: scanline 10s linear infinite;
+}
+
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
