@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
 const CustomCursor = () => {
-  const [mounted, setMounted] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
@@ -12,8 +11,6 @@ const CustomCursor = () => {
   const cursorY = useSpring(0, { stiffness: 1000, damping: 50 });
 
   useEffect(() => {
-    setMounted(true);
-    
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       cursorX.set(e.clientX - (isHovering ? 30 : 20));
@@ -31,18 +28,14 @@ const CustomCursor = () => {
       }
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseover', handleMouseOver);
 
-      return () => {
-        window.removeEventListener('mousemove', handleMouseMove);
-        window.removeEventListener('mouseover', handleMouseOver);
-      };
-    }
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseover', handleMouseOver);
+    };
   }, [cursorX, cursorY, isHovering]);
-
-  if (!mounted) return null;
 
   return (
     <>

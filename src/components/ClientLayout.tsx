@@ -4,11 +4,14 @@ import React, { useState, useEffect } from 'react';
 import CustomCursor from './CustomCursor';
 import PixelatedLoader from './PixelatedLoader';
 import { motion } from 'framer-motion';
+import { isClient } from '@/utils/isClient';
 
 const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     // Simulate content loading
     const timer = setTimeout(() => {
       setIsLoaded(true);
@@ -17,9 +20,13 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     return () => clearTimeout(timer);
   }, []);
 
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <PixelatedLoader />
+      {isClient && <PixelatedLoader />}
       
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -34,7 +41,7 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
           delay: 0.2
         }}
       >
-        <CustomCursor />
+        {isClient && <CustomCursor />}
         
         {/* Grid Background */}
         <div className="fixed inset-0 z-0">
