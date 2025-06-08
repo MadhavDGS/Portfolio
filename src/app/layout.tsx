@@ -3,6 +3,8 @@ import { Share_Tech_Mono, VT323 } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from "@/components/ThemeProvider";
 import dynamic from 'next/dynamic';
+import Navigation from '@/components/Navigation';
+import ClientLayout from '@/components/ClientLayout';
 
 const shareTechMono = Share_Tech_Mono({
   weight: '400',
@@ -41,9 +43,12 @@ export default function RootLayout({
       <body className={`${shareTechMono.className} bg-background text-white`} suppressHydrationWarning>
         <div className="grid-pattern" />
         <ThemeProvider>
-          <CustomCursor />
-          <PixelatedLoader />
-          {children}
+          <ClientLayout>
+            <Navigation />
+            <CustomCursor />
+            <PixelatedLoader />
+            {children}
+          </ClientLayout>
         </ThemeProvider>
       </body>
     </html>
