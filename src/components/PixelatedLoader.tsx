@@ -4,12 +4,15 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const PixelatedLoader = () => {
+  const [mounted, setMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentGridSize, setCurrentGridSize] = useState(20);
 
   useEffect(() => {
+    setMounted(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1250); // Changed from 2500 to 1250 (0.5x faster)
+    }, 1250);
 
     return () => clearTimeout(timer);
   }, []);
@@ -20,23 +23,25 @@ const PixelatedLoader = () => {
     desktop: 30  // Original grid size for desktop
   };
 
-  // Determine grid size based on window width
-  const [currentGridSize, setCurrentGridSize] = useState(gridSize.mobile);
-
   useEffect(() => {
     const handleResize = () => {
-      setCurrentGridSize(window.innerWidth < 768 ? gridSize.mobile : gridSize.desktop);
+      if (typeof window !== 'undefined') {
+        setCurrentGridSize(window.innerWidth < 768 ? gridSize.mobile : gridSize.desktop);
+      }
     };
 
     // Set initial size
     handleResize();
 
-    // Add resize listener
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   const pixels = Array.from({ length: currentGridSize * currentGridSize });
+
+  if (!mounted) return null;
 
   return (
     <AnimatePresence>
@@ -72,12 +77,12 @@ const PixelatedLoader = () => {
                       'var(--accent-color)',
                       'var(--background)'
                     ],
-                    scale: window.innerWidth < 768 ? 1 : [0.8, 1, 0.9] // Disable scale animation on mobile
+                    scale: typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : [0.8, 1, 0.9]
                   }}
                   transition={{
                     duration: 1,
                     repeat: Infinity,
-                    delay: window.innerWidth < 768 ? index * 0.002 : index * 0.0025, // Faster delay on mobile
+                    delay: typeof window !== 'undefined' && window.innerWidth < 768 ? index * 0.002 : index * 0.0025,
                     ease: "easeInOut"
                   }}
                   className="w-full h-full"
@@ -100,7 +105,7 @@ const PixelatedLoader = () => {
             <motion.div
               animate={{
                 opacity: [1, 0.5, 1],
-                scale: window.innerWidth < 768 ? 1 : [1, 1.02, 1] // Disable scale animation on mobile
+                scale: typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : [1, 1.02, 1]
               }}
               transition={{
                 duration: 1,
