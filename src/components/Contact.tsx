@@ -10,7 +10,7 @@ const Contact = () => {
     email: 'sreemadhavpelli@gmail.com',
     phone: '+91 9392281993',
     location: 'Hyderabad, Telangana, India',
-    linkedin: 'https://www.linkedin.com/in/sree-madhav-pelli-b2a015329/',
+    linkedin: 'https://www.linkedin.com/in/pelli-sree-madhav-12815a353/',
     github: 'https://github.com/MadhavDGS'
   };
 

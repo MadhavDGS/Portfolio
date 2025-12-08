@@ -6,14 +6,50 @@ import { motion } from 'framer-motion';
 const Certifications = () => {
   const certifications = [
     {
-      title: '2nd Place – Hackcelerate 2025',
-      organization: 'Muffakham Jah College of Engineering & Technology',
-      date: 'Jun 2025',
-      description: 'Awarded 2nd place among 441+ teams in Hackathon powered by GitHub. Selected as one of the top 16 finalist teams to pitch live at Microsoft IDC, Hyderabad.',
-      link: '/hackcerlate.pdf',
+      title: '1st Place – Vyoma National Hackathon (EdTech Domain)',
+      organization: 'BV Raju Institute of Technology',
+      date: 'Jul 2025',
+      description: 'First place at BVRIT Vyoma National Hackathon competition for EdTech innovation.',
+      link: 'https://www.linkedin.com/in/sree-madhav-pelli-b2a015329/overlay/1753973493166/single-media-viewer/?profileId=ACoAAFLDCRIBlC4BjrutIatMSyrssVN9AZOJeVs',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      )
+    },
+    {
+      title: '2nd Place – Hackcelerate 2025 (Finale at Microsoft IDC)',
+      organization: 'Muffakham Jah College of Engineering & Technology',
+      date: 'Jun 2025',
+      description: 'Awarded 2nd place among 441+ teams in Hackathon powered by GitHub. Selected as one of the top 16 finalist teams to pitch live at Microsoft IDC, Hyderabad.',
+      link: 'https://www.linkedin.com/in/sree-madhav-pelli-b2a015329/overlay/1749321846339/single-media-viewer/?profileId=ACoAAFLDCRIBlC4BjrutIatMSyrssVN9AZOJeVs',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      )
+    },
+    {
+      title: 'Best Paper Award – ETICT 2K25 Conference',
+      organization: 'Sethu Institute of Technology',
+      date: 'May 2025',
+      description: 'Presented research paper "An Efficient Heart Disease Prediction Model using Machine Learning" at National Conference on Emerging Trends in ICT.',
+      link: '#',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
+    },
+    {
+      title: '1st Place – Tech-A-Thon 1.0',
+      organization: 'Vasavi College of Engineering',
+      date: 'Apr 2025',
+      description: 'Winner at Vasavi College of Engineering\'s coding and innovation hackathon.',
+      link: 'https://www.linkedin.com/in/sree-madhav-pelli-b2a015329/details/certifications/1743323891869/single-media-viewer/?profileId=ACoAAFLDCRIBlC4BjrutIatMSyrssVN9AZOJeVs',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       )
     },
@@ -42,11 +78,11 @@ const Certifications = () => {
       )
     },
     {
-      title: 'CBIT SUDHEE HACKATHON 2025',
-      organization: 'Chaitanya Bharathi Institute Of Technology',
+      title: '1st Place – CBIT SUDHEE Hackathon',
+      organization: 'Chaitanya Bharathi Institute of Technology',
       date: 'Mar 2025',
-      description: 'First place in the CBIT SUDHEE HACKATHON 2025.',
-      link: '/CBIT-SUDHEE-HACKATHON-CERTIFICATE-OF-MERIT.pdf',
+      description: 'First place at Chaitanya Bharathi Institute of Technology\'s flagship hackathon.',
+      link: 'https://www.linkedin.com/in/sree-madhav-pelli-b2a015329/details/certifications/1742052922567/single-media-viewer/?profileId=ACoAAFLDCRIBlC4BjrutIatMSyrssVN9AZOJeVs',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -54,14 +90,26 @@ const Certifications = () => {
       )
     },
     {
-      title: 'Ideathon 2K25 Winner',
+      title: '1st Place – Ideathon 2K25',
       organization: 'CVR College of Engineering',
       date: 'Feb 2025',
-      description: 'First place in Ideathon 2K25, presenting SynapseAI: The Smart Study Companion.',
-      link: '/CVR-Ideathon-Certificate.pdf',
+      description: 'Topped among 100+ teams at CVR College of Engineering\'s national innovation challenge.',
+      link: 'https://www.linkedin.com/in/sree-madhav-pelli-b2a015329/details/certifications/1740337387093/single-media-viewer/?profileId=ACoAAFLDCRIBlC4BjrutIatMSyrssVN9AZOJeVs',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      )
+    },
+    {
+      title: '2nd Place – PRODUC-A-THON',
+      organization: 'Gitanjali College',
+      date: 'Oct 2025',
+      description: 'Secured second position in product development and technology innovation challenge.',
+      link: '#',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       )
     },
@@ -81,8 +129,8 @@ const Certifications = () => {
       title: 'Joy of Computing Using Python',
       organization: 'NPTEL',
       date: 'Apr 2024',
-      description: 'Mastered Python programming fundamentals and applications.',
-      link: '/NPTEL-Python-Cert.pdf',
+      description: 'Completed 8-week programming course with distinction through National Programme on Technology Enhanced Learning.',
+      link: 'https://www.linkedin.com/in/sree-madhav-pelli-b2a015329/details/certifications/1726170109539/single-media-viewer/?profileId=ACoAAFLDCRIBlC4BjrutIatMSyrssVN9AZOJeVs',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />

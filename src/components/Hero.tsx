@@ -81,8 +81,9 @@ const Hero = () => {
             className="text-[var(--text-secondary)] text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0"
             variants={itemVariants}
           >
-            I&apos;m a software engineer specializing in building exceptional digital experiences.
-            Currently focused on AI, machine learning, and IoT development.
+            I&apos;m a software engineer passionate about AI, computer vision, and backend development.
+            Building production-ready applications with PyTorch, Spring Boot, and cloud technologies.
+            4x hackathon winner with 460+ GitHub commits.
           </motion.p>
 
           <motion.div

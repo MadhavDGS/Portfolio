@@ -28,6 +28,8 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     <div className="min-h-screen relative overflow-hidden">
       {isClient && <PixelatedLoader />}
       
+      {isClient && <CustomCursor />}
+      
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ 
@@ -41,7 +43,6 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
           delay: 0.2
         }}
       >
-        {isClient && <CustomCursor />}
         
         {/* Grid Background */}
         <div className="fixed inset-0 z-0">

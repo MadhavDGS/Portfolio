@@ -40,7 +40,7 @@ const CustomCursor = () => {
   return (
     <>
       <motion.div
-        className="fixed pointer-events-none z-50 mix-blend-difference"
+        className="fixed pointer-events-none z-[9999] mix-blend-difference"
         style={{
           x: cursorX,
           y: cursorY,
@@ -66,7 +66,7 @@ const CustomCursor = () => {
         </svg>
       </motion.div>
       <motion.div
-        className="fixed pointer-events-none z-50"
+        className="fixed pointer-events-none z-[9999]"
         style={{
           x: mousePosition.x - 4,
           y: mousePosition.y - 4,

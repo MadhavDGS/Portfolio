@@ -7,9 +7,76 @@ import Link from 'next/link';
 const Projects = () => {
   const projects = [
     {
+      title: 'Real-Time Object Detection System – YOLOv9',
+      description: 'Built real-time object detection system using state-of-art YOLOv9 architecture with Roboflow dataset pipeline for IoT device deployment. Integrated Telegram bot for instant detection notifications with image capture and automated alerts.',
+      tech: ['Python', 'YOLOv9', 'Ultralytics', 'Roboflow', 'OpenCV', 'Telegram Bot API', 'IoT'],
+      link: 'https://github.com/MadhavDGS/Real-Time-Object-Detection-YOLOv9',
+      period: 'Recent'
+    },
+    {
+      title: 'While(1)CareAI – AI Healthcare Companion',
+      description: 'Developed healthcare AI assistant with Flask backend API serving PyTorch-based computer vision models for medical image analysis. Implemented real-time image processing pipeline with OpenCV for diagnostic support in rural healthcare settings.',
+      tech: ['Python', 'PyTorch', 'OpenCV', 'Machine Learning', 'Computer Vision', 'Deep Learning', 'Flask', 'Streamlit'],
+      link: 'https://github.com/MadhavDGS/While-1-CareAI',
+      liveLink: 'https://while-1-care-ai-by-while1-innovate.streamlit.app/',
+      period: 'Apr 2025 - Present'
+    },
+    {
+      title: 'Synapse AR – AI-Powered Assistive Glasses',
+      description: 'Developed AI-powered smart glasses using ESP32-CAM for real-time computer vision processing. Integrated Google Vision API for medicine detection and safety recommendations. Won 2nd place at Microsoft IDC Hackcelerate 2025 among 500+ teams.',
+      tech: ['ESP32-CAM', 'Arduino', 'Python', 'OpenCV', 'Google Vision API', 'IoT', 'Computer Vision'],
+      link: 'https://github.com/MadhavDGS/Synapse-AR-Glass',
+      period: 'Jun 2025'
+    },
+    {
+      title: 'Intelligent Document Query System – Hybrid RAG',
+      description: 'Built scalable FastAPI backend with RESTful endpoints, Bearer token authentication, and parallel PDF processing pipelines. Implemented vector database integration with FAISS for semantic search and multi-LLM orchestration. Deployed on GCP with sub-30s response times handling 1000+ queries.',
+      tech: ['Python', 'FastAPI', 'Google Gemini', 'Groq', 'FAISS', 'Sentence Transformers', 'Docker', 'GCP'],
+      link: 'https://github.com/MadhavDGS/HackxClR-New-Aug10M',
+      period: 'Jul 2024 - Aug 2024'
+    },
+    {
+      title: 'Aarohan – AI Mental Wellness Platform',
+      description: 'Built mental health platform with emotional analysis and crisis detection using Google Gemini API for real-time support and AI therapy recommendations. Deployed on Render with live production access.',
+      tech: ['Flask', 'Python', 'Google Gemini API', 'SQLite', 'NLP', 'Emotion Detection'],
+      link: 'https://github.com/MadhavDGS/Aarohan',
+      liveLink: 'https://aarohan-ai-powered-mental-wellness.onrender.com/journal',
+      period: 'Recent'
+    },
+    {
+      title: 'Real-Time Voice-to-Sign Language System',
+      description: 'Built voice-to-sign language converter using Vosk offline speech recognition model supporting multi-language translation (ASL, ISL, Hindi, Telugu, Gujarati). Deployed on Raspberry Pi for accessibility.',
+      tech: ['Python', 'Flask', 'Vosk Speech Recognition', 'NLP', 'Raspberry Pi'],
+      link: 'https://github.com/MadhavDGS/Voice-to-Sign-Language-Translation',
+      period: 'Recent'
+    },
+    {
+      title: 'ClusterConnect Java Backend',
+      description: 'Built Spring Boot microservice backend with 5 JPA entity models implementing complex many-to-many and one-to-many relationships. Designed RESTful API controllers with CRUD operations, Redis caching, WebSocket for real-time messaging, and JWT authentication.',
+      tech: ['Java 17', 'Spring Boot 3.2', 'Maven', 'PostgreSQL', 'Redis', 'JPA/Hibernate', 'REST APIs', 'JWT'],
+      link: 'https://github.com/MadhavDGS/cluster_app_java',
+      period: 'Dec 2024'
+    },
+    {
+      title: 'Sarathi – EdTech Platform',
+      description: 'Built production Flask application with PostgreSQL database integration and Redis caching reducing query times by 40%. Won 1st place at BVRIT Vyoma National Hackathon among 100+ teams.',
+      tech: ['Flask', 'PostgreSQL', 'Redis', 'Google Gemini API', 'Docker', 'REST APIs'],
+      link: 'https://github.com/MadhavDGS/Sahayak-Vyoma',
+      liveLink: 'https://sahayak-0jq7.onrender.com',
+      period: 'Jun 2025 - Present'
+    },
+    {
+      title: 'FRA Claims Management System',
+      description: 'Developed full-stack application for Smart India Hackathon with FastAPI backend handling OCR processing, database operations, and government API integrations. Designed PostgreSQL schema with proper normalization.',
+      tech: ['React 18', 'TypeScript', 'FastAPI', 'Python', 'PostgreSQL', 'Leaflet', 'Docker'],
+      link: 'https://github.com/MadhavDGS/redesigned-guacamole',
+      liveLink: 'https://fra.vanrakshak.tech',
+      period: '2024'
+    },
+    {
       title: 'SynapseAI – Smart Study Companion',
       description: 'Built a React Native app with AI-driven features for study management, including library tracking, scheduling, focus modes, PDF uploads, and an AI chatbot using Botpress API.',
-      tech: ['React Native', 'AI', 'Botpress', 'Firebase'],
+      tech: ['React Native', 'AI', 'Botpress', 'Firebase', 'Expo'],
       link: '#',
       period: 'Jan 2025 - Present'
     },
@@ -18,21 +85,14 @@ const Projects = () => {
       description: 'This project fetches fitness data from Google Fit API, including heart rate, steps, calories, distance, activities, weight, and height measurements.',
       tech: ['Python', 'Google Fit API', 'Data Analysis'],
       link: '#',
-      period: 'Feb 2025 - Present'
-    },
-    {
-      title: 'While(1)CareAI - Healthcare Companion',
-      description: 'An AI-powered healthcare companion designed to support rural clinics and medical interns with advanced medical image analysis, heart monitoring, and risk assessment.',
-      tech: ['AI', 'Machine Learning', 'Medical Imaging', 'Python'],
-      link: '#',
-      period: 'Apr 2025 - Present'
+      period: 'Feb 2025'
     },
     {
       title: "Conway's Game of Life",
       description: 'Built an interactive simulator using Python and Pygame. Features include play/pause, step, clear, random fill, and pattern loading.',
       tech: ['Python', 'Pygame', 'Cellular Automata'],
       link: '#',
-      period: 'May 2025 - Present'
+      period: 'May 2025'
     }
   ];
 
@@ -119,7 +179,7 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="flex justify-end pt-2">
+                  <div className="flex justify-end gap-4 pt-2">
                     <a
                       href={project.link}
                       className="inline-flex items-center gap-2 text-[var(--accent-color)] hover:text-[var(--accent-color)]/80 transition-all duration-300 text-sm font-mono"
@@ -127,7 +187,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       data-cursor-hover
                     >
-                      View Project
+                      GitHub
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-4 w-4"
@@ -143,6 +203,31 @@ const Projects = () => {
                         />
                       </svg>
                     </a>
+                    {project.liveLink && (
+                      <a
+                        href={project.liveLink}
+                        className="inline-flex items-center gap-2 text-[var(--accent-color)] hover:text-[var(--accent-color)]/80 transition-all duration-300 text-sm font-mono"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-cursor-hover
+                      >
+                        Live Demo
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>

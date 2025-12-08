@@ -8,22 +8,39 @@ const About = () => {
     'Python',
     'Java',
     'C',
+    'PyTorch',
+    'TensorFlow',
     'Machine Learning',
+    'Deep Learning',
     'Computer Vision',
-    'AI Model Training',
+    'OpenCV',
+    'YOLOv9',
+    'Ultralytics',
+    'NLP',
+    'RAG Systems',
+    'LLM Integration',
+    'Spring Boot',
+    'FastAPI',
+    'Flask',
+    'REST APIs',
+    'PostgreSQL',
+    'Redis',
+    'Docker',
+    'GCP',
     'React Native',
-    'Expo Go',
+    'React',
     'Embedded Systems',
     'IoT Development',
     'Arduino',
-    'Automation',
+    'ESP32',
+    'Raspberry Pi',
   ];
 
   const education = {
     school: 'Guru Nanak Institutions Technical Campus',
     degree: 'Bachelor of Technology',
     major: 'Computer Science and Engineering',
-    gpa: '8.8',
+    gpa: '8.04',
     expected: 'Sep 2026',
   };
 
@@ -73,15 +90,22 @@ const About = () => {
             >
               <div className="space-y-3 sm:space-y-4">
                 <p className="text-[var(--text-secondary)] text-sm sm:text-base">
-                  I&apos;m passionate about AI, machine learning, embedded systems, and software development,
-                  with a strong interest in both hardware and software, including electronics.
-                  I love working on AI-related projects and building real-world solutions—whether
-                  software-only, hardware-only, or fully integrated systems.
+                  I&apos;m passionate about AI and machine learning, with focus on computer vision and deep learning 
+                  applications. I&apos;ve worked with PyTorch, TensorFlow, and OpenCV to build real-time object 
+                  detection systems using YOLOv9, medical image analysis pipelines, and embedded vision applications 
+                  on ESP32-CAM, Arduino, and Raspberry Pi.
                 </p>
                 <p className="text-[var(--text-secondary)] text-sm sm:text-base">
-                  Skilled in Python, Java, and C, I develop AI-powered apps, automation tools,
-                  and IoT devices using platforms like Arduino and ESP32. I&apos;m always exploring
-                  new technologies and turning ideas into impactful projects.
+                  I&apos;ve deployed computer vision solutions for healthcare, IoT security monitoring, and 
+                  assistive technologies. I&apos;m learning the full CV pipeline from dataset preparation with 
+                  Roboflow to model deployment on edge devices. I also have experience with LLM integration 
+                  (Google Gemini, Groq, OpenAI) and vector databases for AI applications.
+                </p>
+                <p className="text-[var(--text-secondary)] text-sm sm:text-base">
+                  Comfortable with Python, Java, and backend frameworks like Spring Boot, FastAPI, and Flask. 
+                  I&apos;ve built production-ready applications with PostgreSQL, Redis caching, and Docker 
+                  containerization. Won 4x 1st place at national hackathons and 2nd place at Microsoft IDC 
+                  Hackcelerate 2025. 460+ commits on GitHub with consistent open-source contributions.
                 </p>
               </div>
             </motion.div>
