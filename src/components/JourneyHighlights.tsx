@@ -281,9 +281,7 @@ const JourneyHighlights = () => {
                                   priority
                                   sizes="320px"
                                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
-                                  fetchPriority="high"
-                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                  style={{ touchAction: 'pan-x', WebkitOverflowScrolling: 'touch' }}
                                 />
                                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                   <p className="text-white text-sm font-mono">{image.caption}</p>
