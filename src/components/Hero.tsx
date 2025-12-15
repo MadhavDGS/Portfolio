@@ -55,7 +55,7 @@ const Hero = () => {
             className="text-3xl sm:text-5xl md:text-7xl font-bold mb-2 sm:mb-4 text-gradient"
             variants={itemVariants}
           >
-            Sree Madhav <br className="sm:hidden" />Pelli
+            Sree Madhav Pelli
           </motion.h1>
 
           <motion.div

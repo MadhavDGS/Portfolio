@@ -97,16 +97,6 @@ const Blog = () => {
                 data-cursor-hover
               >
                 <div className="absolute inset-0 -z-10 grid-background opacity-20" />
-                
-                {post.image && (
-                  <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                )}
 
                 <div className="flex items-center gap-2 text-xs text-[var(--accent-color)] font-mono">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
