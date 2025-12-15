@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const JourneyHighlights = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -187,12 +188,13 @@ const JourneyHighlights = () => {
                         onClick={() => setSelectedImage(moment.images[0].src)}
                       >
                         <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                          <img
+                          <Image
                             src={moment.images[0].src}
                             alt={moment.images[0].caption}
-                            loading="eager"
-                            fetchPriority="high"
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            fill
+                            priority
+                            sizes="(max-width: 768px) 85vw, 400px"
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                           <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <p className="text-white text-sm font-mono">{moment.images[0].caption}</p>
@@ -212,12 +214,13 @@ const JourneyHighlights = () => {
                               onClick={() => setSelectedImage(image.src)}
                             >
                               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                                <img
+                                <Image
                                   src={image.src}
                                   alt={image.caption}
-                                  loading="eager"
-                                  fetchPriority="high"
-                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                  fill
+                                  priority
+                                  sizes="(max-width: 768px) 85vw, 400px"
+                                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                   <p className="text-white text-sm font-mono">{image.caption}</p>
@@ -243,12 +246,13 @@ const JourneyHighlights = () => {
                             onClick={() => setSelectedImage(image.src)}
                           >
                             <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                              <img
+                              <Image
                                 src={image.src}
                                 alt={image.caption}
-                                loading="eager"
-                                fetchPriority="high"
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                fill
+                                priority
+                                sizes="(min-width: 768px) 320px, 85vw"
+                                className="object-cover group-hover:scale-105 transition-transform duration-300"
                               />
                               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <p className="text-white text-sm font-mono">{image.caption}</p>
@@ -270,10 +274,14 @@ const JourneyHighlights = () => {
                               onClick={() => setSelectedImage(image.src)}
                             >
                               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                                <img
+                                <Image
                                   src={image.src}
                                   alt={image.caption}
-                                  loading="eager"
+                                  fill
+                                  priority
+                                  sizes="320px"
+                                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
                                   fetchPriority="high"
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
