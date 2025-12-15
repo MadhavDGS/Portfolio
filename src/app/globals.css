@@ -176,3 +176,13 @@ html {
 .glitch {
   animation: glitch 0.5s infinite;
 }
+
+/* Hide scrollbar for horizontal scroll sections */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

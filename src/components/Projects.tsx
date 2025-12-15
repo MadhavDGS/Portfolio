@@ -1,10 +1,20 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
   const projects = [
     {
       title: 'Real-Time Object Detection System – YOLOv9',
@@ -37,10 +47,9 @@ const Projects = () => {
     },
     {
       title: 'Aarohan – AI Mental Wellness Platform',
-      description: 'Built mental health platform with emotional analysis and crisis detection using Google Gemini API for real-time support and AI therapy recommendations. Deployed on Render with live production access.',
+      description: 'Built mental health platform with emotional analysis and crisis detection using Google Gemini API for real-time support and AI therapy recommendations.',
       tech: ['Flask', 'Python', 'Google Gemini API', 'SQLite', 'NLP', 'Emotion Detection'],
       link: 'https://github.com/MadhavDGS/Aarohan',
-      liveLink: 'https://aarohan-ai-powered-mental-wellness.onrender.com/journal',
       period: 'Recent'
     },
     {
@@ -146,11 +155,13 @@ const Projects = () => {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            {projects.map((project, index) => (
+            {projects.slice(0, showAll ? projects.length : (isMobile ? 3 : 6)).map((project, index) => (
               <motion.div
                 key={project.title}
                 className="relative group"
-                variants={cardVariants}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
                 data-cursor-hover
               >
@@ -233,6 +244,22 @@ const Projects = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* View More Button */}
+          {projects.length > (isMobile ? 3 : 6) && (
+            <motion.div
+              className="flex justify-center mt-8"
+              variants={cardVariants}
+            >
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="px-6 py-3 bg-[var(--accent-color)]/10 hover:bg-[var(--accent-color)]/20 text-[var(--accent-color)] rounded-lg font-mono transition-all duration-300 border border-[var(--accent-color)]/30 hover:border-[var(--accent-color)]/50"
+                data-cursor-hover
+              >
+                {showAll ? 'Show Less' : `View More (${projects.length - (isMobile ? 3 : 6)})`}
+              </button>
+            </motion.div>
+          )}
         </motion.div>
       </div>
 

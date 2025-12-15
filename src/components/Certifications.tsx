@@ -1,9 +1,19 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Certifications = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
   const certifications = [
     {
       title: '1st Place – Vyoma National Hackathon (EdTech Domain)',
@@ -179,11 +189,13 @@ const Certifications = () => {
           </motion.h2>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
+            {certifications.slice(0, showAll ? certifications.length : (isMobile ? 3 : 6)).map((cert, index) => (
               <motion.div
                 key={cert.title}
                 className="relative group"
-                variants={cardVariants}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
                 data-cursor-hover
               >
@@ -236,6 +248,22 @@ const Certifications = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* View More Button */}
+          {certifications.length > (isMobile ? 3 : 6) && (
+            <motion.div
+              className="flex justify-center mt-8"
+              variants={cardVariants}
+            >
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="px-6 py-3 bg-[var(--accent-color)]/10 hover:bg-[var(--accent-color)]/20 text-[var(--accent-color)] rounded-lg font-mono transition-all duration-300 border border-[var(--accent-color)]/30 hover:border-[var(--accent-color)]/50"
+                data-cursor-hover
+              >
+                {showAll ? 'Show Less' : `View More (${certifications.length - (isMobile ? 3 : 6)})`}
+              </button>
+            </motion.div>
+          )}
         </motion.div>
       </div>
 
