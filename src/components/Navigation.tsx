@@ -20,6 +20,7 @@ const Navigation: React.FC = () => {
     { href: '#home', label: 'HOME' },
     { href: '#about', label: 'ABOUT' },
     { href: '#projects', label: 'PROJECTS' },
+    { href: '#journey', label: 'JOURNEY' },
     { href: '#certifications', label: 'CERTIFICATES' },
     { href: '#contact', label: 'CONTACT' },
   ];
