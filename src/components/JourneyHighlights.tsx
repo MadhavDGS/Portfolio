@@ -190,6 +190,8 @@ const JourneyHighlights = () => {
                           <img
                             src={moment.images[0].src}
                             alt={moment.images[0].caption}
+                            loading="eager"
+                            fetchPriority="high"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                           <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -213,6 +215,8 @@ const JourneyHighlights = () => {
                                 <img
                                   src={image.src}
                                   alt={image.caption}
+                                  loading="eager"
+                                  fetchPriority="high"
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -242,6 +246,8 @@ const JourneyHighlights = () => {
                               <img
                                 src={image.src}
                                 alt={image.caption}
+                                loading="eager"
+                                fetchPriority="high"
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                               />
                               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -267,6 +273,8 @@ const JourneyHighlights = () => {
                                 <img
                                   src={image.src}
                                   alt={image.caption}
+                                  loading="eager"
+                                  fetchPriority="high"
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
