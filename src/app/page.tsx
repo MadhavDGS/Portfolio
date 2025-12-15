@@ -7,7 +7,6 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Stats from '@/components/Stats';
 import Certifications from '@/components/Certifications';
-import GitHubStats from '@/components/GitHubStats';
 import Patents from '@/components/Patents';
 import Blog from '@/components/Blog';
 import JourneyHighlights from '@/components/JourneyHighlights';
@@ -17,7 +16,6 @@ export default function Home() {
     <main>
       <Hero />
       <About />
-      <GitHubStats />
       <Stats />
       <Projects />
       <JourneyHighlights />
