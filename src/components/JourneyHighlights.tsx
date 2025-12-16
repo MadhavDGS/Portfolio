@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const JourneyHighlights = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -32,17 +32,19 @@ const JourneyHighlights = () => {
   const moments = [
     {
       title: 'Microsoft IDC Hackcelerate 2025',
-      description: 'Building Synapse AR smart glasses with the team. 2nd place among 500+ teams at Microsoft IDC. Complete hardware prototyping with 3D modeling, printing, PCB design, and AI integration.',
+      description: 'Built Synapse AR - AI-powered smart glasses for elderly healthcare with ESP32, computer vision, and Google Gemini AI. Developed Flask web dashboard for remote health monitoring (heart rate, SpO2, temperature), fall detection, medication management, and Telegram alerts. Integrated gesture control, AR display, and GPS tracking. Won 2nd place among 500+ teams with complete hardware-software integration including 3D printing, PCB design, and real-time AI predictions.',
       images: [
         { src: '/microsoft-idc-building.png', caption: 'Microsoft India Development Center, Hyderabad' },
         { src: '/hackcelerate-team-certificate.jpg', caption: 'Team at Microsoft IDC finale with certificate - 2nd place' },
+        { src: '/hackcelerate-web-dashboard.jpg', caption: 'Flask web dashboard - real-time health monitoring with heart rate, SpO2, schedule management' },
+        { src: '/hackcelerate-medicine-ai.jpg', caption: 'Google Gemini AI medicine recognition - AR display showing medication info and timing' },
         { src: '/hackcelerate-3d-model.png', caption: '3D modeling the smart glasses frame in Fusion 360' },
         { src: '/hackcelerate-presentation.png', caption: 'Executive Summary - Synapse AR smart glasses presentation' },
         { src: '/hackcelerate-3d-frame.png', caption: '3D printed frame with hardware integration' },
         { src: '/hackcelerate-maker-lab.jpg', caption: '3D printers lab for rapid prototyping' },
         { src: '/hackcelerate-prototype.png', caption: 'First prototype with Arduino and sensors' }
       ],
-      tags: ['IoT', 'Computer Vision', '3D Printing', '2nd Place']
+      tags: ['AI', 'Flask', 'Computer Vision', 'IoT', 'ESP32', '2nd Place']
     },
     {
       title: 'Real-Time Sign Language System - AICTE APF Finals',
@@ -188,7 +190,7 @@ const JourneyHighlights = () => {
                         onClick={() => setSelectedImage(moment.images[0].src)}
                       >
                         <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                          <Image
+                          <OptimizedImage
                             src={moment.images[0].src}
                             alt={moment.images[0].caption}
                             fill
@@ -214,7 +216,7 @@ const JourneyHighlights = () => {
                               onClick={() => setSelectedImage(image.src)}
                             >
                               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                                <Image
+                                <OptimizedImage
                                   src={image.src}
                                   alt={image.caption}
                                   fill
@@ -246,7 +248,7 @@ const JourneyHighlights = () => {
                             onClick={() => setSelectedImage(image.src)}
                           >
                             <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                              <Image
+                              <OptimizedImage
                                 src={image.src}
                                 alt={image.caption}
                                 fill
@@ -274,7 +276,7 @@ const JourneyHighlights = () => {
                               onClick={() => setSelectedImage(image.src)}
                             >
                               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                                <Image
+                                <OptimizedImage
                                   src={image.src}
                                   alt={image.caption}
                                   fill

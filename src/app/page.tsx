@@ -5,22 +5,20 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
-import Stats from '@/components/Stats';
 import Certifications from '@/components/Certifications';
 import Patents from '@/components/Patents';
-import Blog from '@/components/Blog';
 import JourneyHighlights from '@/components/JourneyHighlights';
+import Blog from '@/components/Blog';
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
       <About />
-      <Stats />
       <Projects />
       <JourneyHighlights />
-      <Certifications />
       <Blog />
+      <Certifications />
       <Patents />
       <Contact />
     </main>

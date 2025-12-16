@@ -43,7 +43,7 @@ const Stats = () => {
               whileHover={{ scale: 1.02 }}
               data-cursor-hover
             >
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--accent-color)] mb-2">15+</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--accent-color)] mb-2">12+</h3>
               <p className="text-[var(--text-secondary)] text-sm sm:text-base font-mono">Projects Completed</p>
             </motion.div>
 

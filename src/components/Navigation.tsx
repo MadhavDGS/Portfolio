@@ -69,6 +69,9 @@ const Navigation: React.FC = () => {
               onClick={toggleMobileMenu}
               className="text-[var(--text-secondary)] hover:text-[var(--accent-color)] transition-colors duration-300"
               data-cursor-hover
+              aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +79,7 @@ const Navigation: React.FC = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 {isMobileMenuOpen ? (
                   <path
@@ -106,6 +110,9 @@ const Navigation: React.FC = () => {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="md:hidden bg-black/90 backdrop-blur-md"
+              id="mobile-navigation"
+              role="navigation"
+              aria-label="Mobile navigation menu"
             >
               <div className="container mx-auto px-4 py-4">
                 <div className="flex flex-col space-y-4">

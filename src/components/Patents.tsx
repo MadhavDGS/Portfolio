@@ -123,7 +123,7 @@ const Patents = () => {
                     </h4>
                   </div>
                   <div className="flex gap-2 items-center mb-2">
-                    <span className="px-3 py-1 text-xs bg-gradient-to-r from-yellow-500 to-orange-500 text-black rounded-full font-bold">
+                    <span className="px-3 py-1 text-xs bg-[var(--accent-color)]/10 text-[var(--accent-color)] rounded-full font-mono border border-[var(--accent-color)]/30">
                       {pub.award}
                     </span>
                     <span className="text-xs text-[var(--text-secondary)] font-mono">{pub.date}</span>

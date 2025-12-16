@@ -82,8 +82,8 @@ const Hero = () => {
             variants={itemVariants}
           >
             I&apos;m a software engineer passionate about AI, computer vision, and backend development.
-            Building production-ready applications with PyTorch, Spring Boot, and cloud technologies.
-            4x hackathon winner with 460+ GitHub commits.
+            Building production-ready applications with Flask, FastAPI, and cloud technologies.
+            Won 7x competitions (4 hackathons) with consistent open-source contributions.
           </motion.p>
 
           <motion.div
@@ -94,6 +94,7 @@ const Hero = () => {
               href="#about"
               className="inline-flex items-center gap-2 text-[var(--accent-color)] hover:text-[var(--accent-color)]/80 transition-all duration-300 text-sm sm:text-base font-mono"
               data-cursor-hover
+              aria-label="Learn more about Sree Madhav"
             >
               Learn More
               <svg

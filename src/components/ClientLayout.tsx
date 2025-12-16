@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import CustomCursor from './CustomCursor';
 import PixelatedLoader from './PixelatedLoader';
+import ErrorBoundary from './ErrorBoundary';
 import { motion } from 'framer-motion';
 import { isClient } from '@/utils/isClient';
 
@@ -26,6 +27,15 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {/* Skip to main content link for keyboard navigation */}
+      <a 
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-[var(--accent-color)] focus:text-background focus:px-4 focus:py-2 focus:rounded"
+        aria-label="Skip to main content"
+      >
+        Skip to main content
+      </a>
+      
       {isClient && <PixelatedLoader />}
       
       {isClient && <CustomCursor />}
@@ -72,7 +82,9 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
         
         {/* Main Content */}
         <main className="relative z-20">
-          {children}
+          <ErrorBoundary>
+            {children}
+          </ErrorBoundary>
         </main>
       </motion.div>
     </div>

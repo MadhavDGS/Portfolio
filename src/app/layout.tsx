@@ -4,6 +4,8 @@ import { Share_Tech_Mono, VT323 } from 'next/font/google'
 import './globals.css'
 import ClientLayout from '@/components/ClientLayout'
 import Navigation from '@/components/Navigation'
+import StructuredData from '@/components/StructuredData'
+import Analytics from '@/components/Analytics'
 
 const shareTechMono = Share_Tech_Mono({
   weight: '400',
@@ -21,7 +23,7 @@ const vt323 = VT323({
 
 export const metadata: Metadata = {
   title: 'Sree Madhav Pelli - Software Developer & IoT Engineer',
-  description: 'Passionate software developer with hands-on experience in Java, Spring Boot, Python, and IoT technologies. Built production-ready applications with PostgreSQL, REST APIs, and embedded systems (ESP32, Arduino). Won 4+ national hackathons including Microsoft IDC finale.',
+  description: 'Passionate software developer with hands-on experience in Python, Flask, FastAPI, and IoT technologies. Built production-ready applications with PostgreSQL, REST APIs, and embedded systems (ESP32, Arduino). Won 7+ national competitions including 4 hackathons and Microsoft IDC 2nd place.',
   keywords: [
     'Sree Madhav Pelli',
     'Java Developer',
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://portfolio-72r7.vercel.app',
     title: 'Sree Madhav Pelli - Software Developer & IoT Engineer',
-    description: 'Passionate software developer with hands-on experience in Java, Spring Boot, Python, and IoT technologies. Won 4+ national hackathons including Microsoft IDC Hackcelerate 2025.',
+    description: 'Passionate software developer with hands-on experience in Python, Flask, FastAPI, and IoT technologies. Won 7+ national competitions including 4 hackathons and Microsoft IDC 2nd place.',
     siteName: 'Sree Madhav Pelli Portfolio',
     images: [
       {
@@ -68,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sree Madhav Pelli - Software Developer & IoT Engineer',
-    description: 'Passionate software developer with hands-on experience in Java, Spring Boot, Python, and IoT. Won 4+ national hackathons.',
+    description: 'Passionate software developer with hands-on experience in Python, Flask, FastAPI, and IoT. Won 7+ competitions (4 hackathons).',
     images: ['https://portfolio-72r7.vercel.app/og-image.jpg'],
   },
   robots: {
@@ -85,6 +87,14 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  manifest: '/manifest.json',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#64ffda',
 }
 
 export default function RootLayout({
@@ -95,6 +105,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${shareTechMono.variable} ${vt323.variable}`}>
       <body className={`${shareTechMono.className} bg-background text-white`}>
+        <Analytics />
+        <StructuredData />
         <div className="grid-pattern" />
         <ClientLayout>
           <Navigation />

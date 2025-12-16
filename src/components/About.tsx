@@ -172,7 +172,7 @@ const About = () => {
                   Comfortable with Python, Java, and backend frameworks like Spring Boot, FastAPI, and Flask. 
                   I&apos;ve built production-ready applications with PostgreSQL, Redis caching, and Docker 
                   containerization. Won 4x 1st place at national hackathons and 2nd place at Microsoft IDC 
-                  Hackcelerate 2025. 460+ commits on GitHub with consistent open-source contributions.
+                  Hackcelerate 2025 with consistent open-source contributions.
                 </p>
               </div>
             </motion.div>
